@@ -1,6 +1,7 @@
 public Boolean isTypeAccount(sObject record)
 {
-    if(record.Id.startsWith('001'){
+    String objectType = record.Id;
+    if(objectType.startsWith('001'){
         return true;
     }else{
         return false;
