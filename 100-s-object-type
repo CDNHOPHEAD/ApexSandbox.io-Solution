@@ -1,7 +1,9 @@
 public Boolean isTypeAccount(sObject record)
 {
-If (Account.get(0) instanceof isTypeAccount) {
+If (record instanceof Account) {
     return true;
 }else{
-    reurn false;
+    return false;
 }
+
+//return record instanceOf Account;
