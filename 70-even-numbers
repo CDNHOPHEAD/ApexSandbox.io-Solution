@@ -1,0 +1,22 @@
+public List<Integer> evenNumbers(Integer n) {
+    //code here
+    List<Integer> evenNumberList = new List<Integer>();
+    Integer tempEvenNumber =0;
+    Integer count =0;
+
+    if(evenNumberList.size()<n){
+        for(Integer i=0; n><n; i++){
+        evenNumberList.add(tempEvenNumber);
+    }
+do{
+
+}
+
+}
+    }
+    
+
+    //Loop through integrs starting at zero
+    //If math.mod(tempinteger,2)==0; && evenNumberList.size() < n)
+    //Add tempeintegre to list
+    //return list
