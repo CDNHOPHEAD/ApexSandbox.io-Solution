@@ -2,7 +2,7 @@ public Map<String, Account> phoneToAccount(List<Account> accounts) {
     //code here
     Map<String, Account> accountMap = new Map<String,Account>();
 
-    for(Integer i=0; i<=accounts.size(); i++){
+    for(Integer i=1; i<accounts.size(); i++){
         Account a = accounts[i];
         if(a.Phone != null){
             accountMap.put(a.Phone , a);
