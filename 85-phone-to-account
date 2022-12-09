@@ -4,8 +4,8 @@ public Map<String, Account> phoneToAccount(List<Account> accounts) {
 
     for(Integer i=1; i<=accounts.size(); i++){
         Account a = accounts[i];
-        if(a[i].Phone != null){
-            accountMap.put(a[i].Phone , a[i]);
+        if(a.Phone != null){
+            accountMap.put(a.Phone , a);
         }
     }
     return accountMap;
