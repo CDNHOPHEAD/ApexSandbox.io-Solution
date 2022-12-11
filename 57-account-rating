@@ -9,5 +9,5 @@ public void setAccountRating(Account a) {
     if(a.AnnualRevenue >= 500000){
         a.Rating = 'Hot';
     }
-    insert a;
+    update a;
 }
