@@ -4,8 +4,6 @@ public Id insertStudent(String name, String email) {
         newStudent.Name = name;
         newStudent.apxio__Email__c = email;
         insert newStudent;
-
-        Id newStudentId = [SELECT Id FROM apxio__Student__c WHERE Name =:newStudent.Name && apxio__Email__c =:newStudent.apxio__Email__c LIMIT 1];
-        return newStudentId;
+        return newStudent.Id;
 
 }
