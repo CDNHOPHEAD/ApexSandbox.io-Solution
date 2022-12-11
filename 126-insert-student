@@ -5,10 +5,7 @@ public Id insertStudent(String name, String email) {
         newStudent.apxio__Email__c = email;
         insert newStudent;
 
-        List<apxio__Student__c> newStudentList = [SELECT Id FROM apxio__Student__c WHERE Name =:newStudent.Name && apxio__Email__c =:newStudent.apxio__Email__c];
-
-        for(apxio__Student__c student: newStudentList){
-            return student.Id;
-        }
+        Id newStudentId = [SELECT Id FROM apxio__Student__c WHERE Name =:newStudent.Name && apxio__Email__c =:newStudent.apxio__Email__c LIMIT 1];
+        return newStudentId;
 
 }
