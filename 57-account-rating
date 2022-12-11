@@ -1,13 +1,11 @@
 public void setAccountRating(Account a) {
     //code here
-    if(a.AnnualRevenue <= 100000){
-        a.Rating = 'Cold';
-    }
-    if(a.AnnualRevenue > 100000 && a.AnnualRevenue <=500000){
-        a.Rating = 'Warm';
-    }
     if(a.AnnualRevenue >= 500000){
         a.Rating = 'Hot';
-    }
+    }else if(a.AnnualRevenue > 100000 && a.AnnualRevenue <=500000){
+        a.Rating = 'Warm';
+    }else(a.AnnualRevenue <= 100000){
+        a.Rating ='Cold';
+    }    
     update a;
 }
