@@ -4,7 +4,7 @@ public String divide(Integer a, Integer b){
         String result = String.valueOf(a/b);
         return result;
     }catch(NullPointerException e){   
-        String errorMessage = 'Message: ' + e.getMessage();  
+        String errorMessage = e.getMessage();  
         return errorMessage;
 }
 }
