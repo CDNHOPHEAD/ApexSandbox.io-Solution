@@ -3,8 +3,7 @@ public String divide(Integer a, Integer b){
     try{
         String result = String.valueOf(a/b);
         return result;
-    }catch(DmlException e){
-        String errorMessage = 'The following exception has occurred: ' + e.getMessage();
-        return errorMessage;
-}
+    }catch(NullPointerException npe) {
+    return 'The following exception has occurred: ' + npe.getMessage());
+
 }
