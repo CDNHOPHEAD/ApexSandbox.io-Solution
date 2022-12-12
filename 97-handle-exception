@@ -3,8 +3,8 @@ public String divide(Integer a, Integer b){
     try{
         String result = String.valueOf(a/b);
         return result;
-    }catch(Exception e) {   
-    String errorMessage = 'Message: ' + e.getMessage());  
-    return errorMessage;
+    }catch(DmlException e) {   
+        String errorMessage = 'Message: ' + e.getMessage());  
+        return errorMessage;
 }
 }
