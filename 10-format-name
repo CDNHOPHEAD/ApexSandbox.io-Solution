@@ -1,0 +1,14 @@
+public String formatName(String firstName, String lastName) {
+    //code here
+    String fullName; 
+    if(firstName != null && lastName != null){
+        fullName = lastName+', '+firstName;
+    }else if(firstName ==null && lastName !=null){
+        fullName = lastName;
+    }else if(firstName !=null && lastName == null){
+        fullName = firstName;
+    }else{
+        fullName=null;
+    }
+    return fullName;
+}
