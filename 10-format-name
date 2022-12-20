@@ -3,9 +3,9 @@ public String formatName(String firstName, String lastName) {
     String fullName; 
     if(firstName != null && lastName != null){
         fullName = lastName+', '+firstName;
-    }else if(firstName ==null && lastName !=null){
+    }else if(String.isEmpty(firstName) && lastName !=null){
         fullName = lastName;
-    }else if(firstName !=null && lastName == null){
+    }else if(firstName !=null && String.isEmpty(lastName)){
         fullName = firstName;
     }else{
         fullName=null;
