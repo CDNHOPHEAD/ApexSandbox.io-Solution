@@ -12,7 +12,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
         }else{
             //find acc.Industry in map
             //Add acc.AnnualRevenue to exsisting value
-            industryRev.put(acc.Industry, (Decimal)acc.AnnualRevenue);
+            industryRev.put(acc.Industry, acc.AnnualRevenue);
         }
     }
     return industryRev;
