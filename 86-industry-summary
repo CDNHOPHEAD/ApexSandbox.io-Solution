@@ -6,11 +6,11 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
         if(!industryRev.containsKey(acc.Industry){
             //Add acc.Industry as a key
             //Add acc.AnnualRevenue to value
-            industryRev.put(acc.Industry, acc.AnnualRevenue);
+            industryRev.put(acc.Industry, (Decimal)acc.AnnualRevenue);
         }else{
             //find acc.Industry in map
             //Add acc.AnnualRevenue to exsisting value
-            Decimal totalRev = industryRev.get(acc.Industry)+acc.AnnualRevenue;
+            Decimal totalRev = industryRev.get(acc.Industry)+(Decimal)acc.AnnualRevenue;
             industryRev.put(acc.Industry,totalRev);
         }
     }
