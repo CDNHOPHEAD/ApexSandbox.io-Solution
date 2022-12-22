@@ -10,8 +10,8 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
         }else{
             //find acc.Industry in map
             //Add acc.AnnualRevenue to exsisting value
-            Decimal totalRev = industryRev.get(acc.Industry)+(Decimal)acc.AnnualRevenue;
-            industryRev.put(acc.Industry,totalRev);
+            Decimal currentRev = industryRev.get(acc.Industry);
+            industryRev.put(acc.Industry,currentRev + acc.AnnualRevenue);
         }
     }
     return industryRev;
