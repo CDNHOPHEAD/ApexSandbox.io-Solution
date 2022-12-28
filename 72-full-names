@@ -8,8 +8,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
 
     for(String lastName : lastNames){
         Integer i = 0;
-        //String temp = fullNames.get(i)+' '+lastName;
-        String temp= 'Adam';
+        String temp = fullNames.get(i)+' '+lastName;
         fullNames.add(i, temp);
         i++;
     }
