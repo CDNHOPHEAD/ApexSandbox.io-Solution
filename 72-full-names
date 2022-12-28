@@ -2,7 +2,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     //code here
     List<String> fullNames = new List<String>();
 
-    for(Integer i=0; i<=firstNames.size();i++){
+    for(Integer i=0; i<firstNames.size();i++){
         String firstName = firstNames.get(i);
         String lastName = lastNames.get(i);
         String fullName = firstName+' '+lastName;
