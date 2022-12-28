@@ -3,7 +3,9 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     List<String> fullNames = new List<String>();
 
     for(String st: firstNames){
-        fullNames.add(st);
+        Integer i=0;
+        fullNames.add(i, st);
+        i++;
     }
 
     for(String lastName : lastNames){
