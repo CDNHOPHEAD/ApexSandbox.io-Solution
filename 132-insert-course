@@ -8,7 +8,7 @@ public Id insertCourse(String name, String details, Integer credits) {
             newCourse.apxio__Credits__c =String.valueOf(credits);
             //String sInteger = String.valueOf(myInteger);
         }else{
-            newCourse.apxio__Credits__c = null;
+            return null;
         }
         
         insert newCourse;
