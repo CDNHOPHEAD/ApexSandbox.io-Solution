@@ -16,8 +16,6 @@ public String changeTimeFormat(String strTime) {
     if(hour > 12){
         hour -= 12;
         formattedTime = String.valueOf(hour)+':'+minutes+' PM';
-    }else{
-        formattedTime = strTime+' AM';
     }
     return formattedTime;
 }
