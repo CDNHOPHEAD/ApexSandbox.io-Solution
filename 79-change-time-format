@@ -6,10 +6,10 @@ public String changeTimeFormat(String strTime) {
 
     if(hour == 0){
         hour = 12;
-        formattedTime = (String)hour+':'+minutes+' AM';
+        formattedTime = String.valueOf(hour)+':'+minutes+' AM';
     }else if(hour > 12){
         hour -= 12;
-        formattedTime = (String)hour+':'+minutes+' PM';
+        formattedTime = String.valueOf(hour)+':'+minutes+' PM';
     }else{
         formattedTime = strTime+' AM';
     }
