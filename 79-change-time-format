@@ -1,6 +1,7 @@
 public String changeTimeFormat(String strTime) {
     //code here
-    Integer hour = Integer.valueOf(strTime.substringBefore(':'));
+    String hourStr = strTime.substringBefore(':');
+    Integer hour = Integer.valueOf(hourStr);
     String minutes = strTime.substringAfter(':'));
     String suffix = ' AM';
     String formattedTime;
