@@ -1,30 +1,21 @@
 public String changeTimeFormat(String strTime) {
     //code here
-    String hourStr = strTime.substringBefore(':');
-    Integer hour = Integer.valueOf(hourStr);
-    String minutes = strTime.substringAfter(':'));
+   String[] parts = strTime.split(':');
+    Integer hours = Integer.valueOf(parts[0]);
+    Integer minutes = Integer.valueOf(parts[1]);
     String suffix = ' AM';
 
-
-    if(hour == 0){
-        hour = 12;
-    }
-
-    if(hour == 12){
+    if (hours == 12) suffix = ' PM';
+    if (hours > 12) { 
         suffix = ' PM';
+        hours -= 12;
     }
-    
-    if(hour > 12){
-        hour -= 12;
-        suffix = ' PM';
-    }
-
-    String formattedHours = String.valueOf(hour);
-    if(formattedHours.length()==1){
-        formattedHours = '0' + formattedHours;
+    if (hours == 0) {
+        hours = 12;
     }
 
-    String formattedTime = formattedHours+':'+ minutes + suffix;
+    String strHours = String.valueOf(hours);
+    if (strHours.length() == 1) strHours = '0' + strHours;
 
-    return formattedTime;
+    return strHours + ':' + parts[1] + suffix;
 }
