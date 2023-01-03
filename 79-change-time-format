@@ -4,7 +4,7 @@ public String changeTimeFormat(String strTime) {
     Integer hour = Integer.valueOf(hourStr);
     String minutes = strTime.substringAfter(':'));
     String suffix = ' AM';
-    String formattedTime;
+
 
     if(hour == 0){
         hour = 12;
@@ -24,7 +24,7 @@ public String changeTimeFormat(String strTime) {
         formattedHours = '0' + formattedHours;
     }
 
-    formattedTime = formattedHours+':'+ minutes + suffix;
+    String formattedTime = formattedHours+':'+ minutes + suffix;
 
     return formattedTime;
 }
