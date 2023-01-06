@@ -1,5 +1,5 @@
 public List<Account> checkAccounts(List<Account> accounts){
-        try {  
+ 
             Boolean billingCityPresent = true;
             if(accounts.isEmpty()==true) throw new IllegalArgumentException('accounts should not be null');
 
@@ -12,7 +12,7 @@ public List<Account> checkAccounts(List<Account> accounts){
             if(billingCityPresent == true){
                 return accounts;
             } 
-            }
+        
              
 }
 
