@@ -1,7 +1,7 @@
 public List<Account> checkAccounts(List<Account> accounts){
  
             
-            if(accounts.isEmpty()==true){
+            if(accounts==null){
                 throw new IllegalArgumentException('accounts should not be null');
             } 
 
