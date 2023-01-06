@@ -1,17 +1,16 @@
 public List<Account> checkAccounts(List<Account> accounts){
  
-            Boolean billingCityPresent = true;
+            
             if(accounts.isEmpty()==true) throw new IllegalArgumentException('accounts should not be null');
 
             for(Account acc: accounts){
                 if(acc.BillingCity == null){
-                    billingCityPresent = false;
                     throw new AccountException('this is bad');
                 }
                 }
-            if(billingCityPresent == true){
+ 
                 return accounts;
-            } 
+
         
              
 }
