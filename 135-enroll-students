@@ -3,9 +3,12 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Student__c> studentList =[SELECT Id, apxio__Email__c FROM apxio__Student__c WHERE apxio__Email__c IN :emails];
      Id classId = [SELECT Id, Name FROM apxio__Class__c WHERE Name = :className].Id;
 
+    List<apxio__Class_Enrollment__c> enrollList = new List<apxio__Class_Enrollment__c>();
     for(apxio__Student__c student: studentList){
         apxio__Class_Enrollment__c studentEnrollment = new apxio__Class_Enrollment__c();
         studentEnrollment.apxio__Student__c = student.Id;
         studentEnrollment.apxio__Offered_Class__c = classId;
+        enrollList.add(studentEnrollment);
     }
+    insert enrollList;
 }
