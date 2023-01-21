@@ -1,8 +1,8 @@
 public Integer fibonacci(Integer n) {
     //code here
     List<Integer> numList = new List<Integer>();
-    for(Integer i=0;i <= n; i++){
-        if(i==0 || i==1){
+    for(Integer i=1;i <= n; i++){
+        if(i==1 || i==2){
             numList.add(1);
         }else{
         Integer firstNum = numList.get(i-2);
