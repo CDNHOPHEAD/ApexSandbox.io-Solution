@@ -5,8 +5,8 @@ public Integer fibonacci(Integer n) {
         if(i==0 || i==1){
             numList.add(1);
         }else{
-        Integer firstNum = numList[i-2];
-        Integer secondNum = numList[i-1];
+        Integer firstNum = numList.get(i-2);
+        Integer secondNum = numList.get(i-1);
         Integer currentNum = firstNum + secondNum;
         numList.add(currentNum);
         }
