@@ -2,7 +2,7 @@ public Integer fibonacci(Integer n) {
     //code here
     List<Integer> numList = new List<Integer>();
     for(Integer i=0;i < n; i++){
-        if(i=0 || i=1){
+        if(i==0 || i==1){
             numList.add(1);
         }else{
         Integer firstNum = numList[i-2];
@@ -10,7 +10,6 @@ public Integer fibonacci(Integer n) {
         Integer currentNum = firstNum + secondNum;
         numList.add(currentNum);
         }
-
         Integer size = numList.size();
         Integer fib = numList[size];
         return fib;
