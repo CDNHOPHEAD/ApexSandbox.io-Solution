@@ -12,6 +12,6 @@ public Integer fibonacci(Integer n) {
         }
     }
     Integer size = numList.size();
-        Integer fib = numList.get(size);
-        return fib;
+    Integer fib = numList.get(size);
+    return fib;
 }
